@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p>
+<p id="test1"></p>
+<p id="test2"></p>
+<p id="test3"></p>
+<p id="test4"></p>
+<p id="test5"></p>
+
+
+<p id="test6"></p>
+<p id="test7"></p>
+<p id="test8"></p>
+
+<p id="test9"></p>
+<p id="test10"></p>
+<p id="test11"></p>
+
+<p id="test12"></p>
+
+
+<script>
+
+   // class is a function that has properties assigned to it
+   //  a class has a method called constructor() that assigns values to variables
+    // a class has a method called constructor() that assigns values to variables
+    // to create a class you create a class key word
+    // class name start with uppercase letter
+     // create classes together with constructor method
+    class Person{
+        constructor(thename,theage) {
+            this.username=thename;
+            this.age=theage;
+
+        }
+        // methods are functions inside a class
+      getDetails(){
+         return "my name is "  + this.username  +" my age is " +  this.age + " years old";
+          }
+      setDetails(name){ //setter
+        this.username=name;
+        return this.username
+
+      }
+    static staticMethod(){
+        return "i am static.Not accessible through an object";
+    }
+    }
+
+    // static methods:a static method is defined on the class itself and not on the prototype
+
+       // creating an object instances
+    p1= new Person("john",23);
+    p2= new Person("mary",34);
+    p3= new Person("bob",21);
+
+    //set values
+   p1.setDetails("johnDoe");
+   p2.setDetails("florence python dev");
+   p3.setDetails("nyambok css dev");
+
+   document.getElementById("test6").innerHTML=p1.setDetails("john the tech gou");
+   document.getElementById("test7").innerHTML=p2.setDetails("florence python dev");
+   document.getElementById("test8").innerHTML=p3.setDetails("kelvin the bully");
+
+
+   // accessing object properties
+
+  // objectname.property
+  // objectname.property
+  //   p1.username;
+  //   p1.age
+  //   document.getElementById("test1").innerHTML= "your name is"+" " + p1.username + " " +"age is" + " "+p1.age;
+  //   document.getElementById("test2").innerHTML="your name is"+" " + p2.username + " " +"age is" + " "+p2.age;
+  //    document.getElementById("test3").innerHTML="your name is"+" " + p3.username + " " +"age is" + " "+p3.age;
+
+      document.getElementById("test3").innerHTML=p1.getDetails();
+      document.getElementById("test4").innerHTML=p2.getDetails();
+      document.getElementById("test5").innerHTML=p3.getDetails();
+
+   document.getElementById("test3").innerHTML=p1.getDetails();
+   document.getElementById("test4").innerHTML=p2.getDetails();
+   document.getElementById("test5").innerHTML=p3.getDetails();
+
+//let,const
+
+   document.getElementById("test12").innerHTML=Person.staticMethod();
+</script>
+</body>
+</html>
